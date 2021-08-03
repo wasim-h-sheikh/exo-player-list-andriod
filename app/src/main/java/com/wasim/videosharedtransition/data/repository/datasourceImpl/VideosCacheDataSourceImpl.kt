@@ -5,14 +5,14 @@ import com.wasim.videosharedtransition.data.repository.datasource.VideosCacheDat
 
 class VideosCacheDataSourceImpl :
     VideosCacheDataSource {
-    private var artistList = ArrayList<Video>()
+    private var videoList = ArrayList<Video>()
 
     override suspend fun getVideosFromCache(): List<Video> {
-        return artistList
+        return videoList
     }
 
     override suspend fun saveVideosToCache(videos: List<Video>) {
-       artistList.clear()
-       artistList = ArrayList(videos)
+       videoList.clear()
+       videoList = ArrayList(videos)
     }
 }

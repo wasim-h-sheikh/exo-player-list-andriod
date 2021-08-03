@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -16,7 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String","BASE_URL","\"https://12432fa2-3447-4920-9cbc-72455e988207.mock.pstmn.io\""
+        buildConfigField "String","BASE_URL","\"https://2f5ea98d-ca60-41f5-b4e7-8de56efb75d0.mock.pstmn.io\""
 
     }
 
@@ -41,6 +42,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def lifecycle_version = "2.3.1"
     def arch_version = "2.1.0"
     def room_version = "2.3.0"
@@ -49,7 +51,7 @@ dependencies {
     def retrofit_version = "2.9.0"
     def Interceptor_version = "4.7.2"
     def Glide_version = "4.12.0"
-
+    def nav_version="2.3.5"
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.google.android.material:material:1.4.0'
@@ -83,6 +85,13 @@ dependencies {
     //Glide
     implementation "com.github.bumptech.glide:glide:$Glide_version"
     kapt "com.github.bumptech.glide:compiler:$Glide_version"
+    //Exo-Player
+    implementation 'com.google.android.exoplayer:exoplayer:2.14.2'
+
+    //Android Navigation Architecture
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

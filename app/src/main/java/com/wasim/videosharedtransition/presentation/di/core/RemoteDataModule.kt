@@ -11,7 +11,7 @@ import javax.inject.Singleton
 class RemoteDataModule() {
     @Singleton
     @Provides
-    fun provideMovieRemoteDataSource(apiService: APIService): VideosRemoteDatasource {
+    fun provideVideosRemoteDatasource(apiService: APIService): VideosRemoteDatasource {
         return VideosRemoteDataSourceImpl(
             apiService
         )

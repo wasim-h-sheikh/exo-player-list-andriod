@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/nav_graph"
+	app:startDestination="@id/videoFragment">
+
+	<fragment
+		android:id="@+id/videoFragment"
+		android:name="com.wasim.videosharedtransition.presentation.video.VideoFragment"
+		android:label="VideoFragment" >
+		<action
+			android:id="@+id/action_videoFragment_self"
+			app:destination="@id/videoFragment" />
+		<action
+			android:id="@+id/action_videoFragment_to_playerFragment"
+			app:destination="@id/playerFragment" />
+	</fragment>
+	<fragment
+		android:id="@+id/playerFragment"
+		android:name="com.wasim.videosharedtransition.presentation.player.PlayerFragment"
+		android:label="PlayerFragment" >
+		<argument
+			android:name="video"
+			app:argType="com.wasim.videosharedtransition.data.model.Video" />
+		<argument
+			android:name="seekToPosition"
+			app:argType="long" />
+		<action
+			android:id="@+id/action_playerFragment_to_videoFragment"
+			app:destination="@id/videoFragment" />
+	</fragment>
+</navigation>
