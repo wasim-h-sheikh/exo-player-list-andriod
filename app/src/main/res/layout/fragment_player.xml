@@ -7,11 +7,11 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <variable
         name="dataModel"
-        type="com.wasim.videosharedtransition.data.model.Video" />
+        type="com.wasim.exoplayerlist.data.model.Video" />
 
     <variable
         name="callback"
-        type="com.wasim.videosharedtransition.util.PlayerStateCallback" />
+        type="com.wasim.exoplayerlist.util.PlayerStateCallback" />
 
     <variable
         name="seek_to"
@@ -23,15 +23,14 @@ xmlns:tools="http://schemas.android.com/tools">
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:transitionName="mediaContainer"
+    android:keepScreenOn="true"
     android:background="@color/silver_light"
     tools:context=".presentation.player.PlayerFragment">
 
     <FrameLayout
         android:id="@+id/media_container"
         android:layout_width="match_parent"
-        android:transitionName="mediaContainer"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/player_height"
         android:background="#000"
         android:scaleType="center"
         app:layout_constraintBottom_toTopOf="@+id/title"
@@ -72,7 +71,6 @@ xmlns:tools="http://schemas.android.com/tools">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/black_50"
         android:src="@drawable/ic_volume_on_32dp"
         app:layout_constraintBottom_toTopOf="@id/title"
         app:layout_constraintEnd_toEndOf="@id/parent"

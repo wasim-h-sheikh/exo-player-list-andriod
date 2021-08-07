@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_volume_on_32dp.xml" value="0.3314749113025849" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.31145833333333334" />
         <entry key="app/src/main/res/layout/activity_player.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_player.xml" value="0.3116206357477853" />

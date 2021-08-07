@@ -6,22 +6,19 @@
 
 	<fragment
 		android:id="@+id/videoFragment"
-		android:name="com.wasim.videosharedtransition.presentation.video.VideoFragment"
+		android:name="com.wasim.exoplayerlist.presentation.video.VideoFragment"
 		android:label="VideoFragment" >
-		<action
-			android:id="@+id/action_videoFragment_self"
-			app:destination="@id/videoFragment" />
 		<action
 			android:id="@+id/action_videoFragment_to_playerFragment"
 			app:destination="@id/playerFragment" />
 	</fragment>
 	<fragment
 		android:id="@+id/playerFragment"
-		android:name="com.wasim.videosharedtransition.presentation.player.PlayerFragment"
+		android:name="com.wasim.exoplayerlist.presentation.player.PlayerFragment"
 		android:label="PlayerFragment" >
 		<argument
 			android:name="video"
-			app:argType="com.wasim.videosharedtransition.data.model.Video" />
+			app:argType="com.wasim.exoplayerlist.data.model.Video" />
 		<argument
 			android:name="seekToPosition"
 			app:argType="long" />

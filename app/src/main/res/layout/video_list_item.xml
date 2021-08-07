@@ -6,11 +6,11 @@
 
 		<variable
 			name="dataModel"
-			type="com.wasim.videosharedtransition.data.model.Video" />
+			type="com.wasim.exoplayerlist.data.model.Video" />
 
 		<variable
 			name="callback"
-			type="com.wasim.videosharedtransition.util.PlayerStateCallback" />
+			type="com.wasim.exoplayerlist.util.PlayerStateCallback" />
 
 		<variable
 			name="index"
@@ -42,8 +42,7 @@
 			<FrameLayout
 				android:id="@+id/media_container"
 				android:layout_width="match_parent"
-				android:transitionName="mediaContainer"
-				android:layout_height="300dp"
+				android:layout_height="@dimen/player_height"
 				android:background="#000"
 				android:scaleType="center">
 
